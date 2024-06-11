@@ -11,4 +11,4 @@ jobs:
         run: |
           sudo apt update
           sudo apt -y install postgresql-client
-          PGPASSWORD=${{ secrets.PGPASS }} psql -U ${{ secrets.PGUSER }} -h ${{ secrets.PGCONNECTIONSTRING }} -d ${{ secrets.PGDBNAME }} -f createTables.sql
+          PGPASSWORD=${{ secrets.PGPASS }} psql -U ${{ secrets.PGUSER }} -h database-1.cxk0mccsmcso.us-east-1.rds.amazonaws.com:5432 -d ${{ secrets.PGDBNAME }} -f createTables.sql
